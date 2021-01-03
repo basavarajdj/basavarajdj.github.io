@@ -3,6 +3,13 @@
   var menu = document.getElementById("menu");
   var close = document.getElementById("menu-close");
 
+	$(".expanded").hide();
+
+    $(".expanded a, .collapsed a").click(function(eve) {
+        eve.preventDefault();
+        $(".expanded, .collapsed").toggle('slow');
+    });
+
   toggle.addEventListener("click", function(e) {
     if (menu.classList.contains("open")) {
       menu.classList.remove("open");
